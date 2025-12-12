@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnteraktif HTML Kursu Deneyim Alanı</title>
+    <!-- Tailwind CSS ile modern ve responsive tasarım -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Özel stil: Kod bloklarını ve çıktıları daha okunaklı yapmak için */
+        body { font-family: 'Inter', sans-serif; background-color: #f0f4f8; }
+        .code-example {
+            background-color: #1f2937; /* Koyu gri (code block) */
+            color: #f9fafb; /* Açık metin */
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            white-space: pre-wrap; /* Uzun satırları otomatik sarar */
+        }
+        .output-box {
+            border: 2px solid #3b82f6; /* Mavi çerçeve */
+            padding: 20px;
+            margin-top: 10px;
+            background-color: #eff6ff; /* Açık mavi arka plan */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .section-header {
+            border-bottom: 2px solid #e5e7eb;
+        }
+        /* Saf HTML katlanabilir/genişletilebilir yapı için detail etiketi kullanılır */
+        details[open] summary {
+            border-bottom: 1px solid #d1d5db;
+        }
+        summary {
+            cursor: pointer;
+            padding: 10px 0;
+            list-style: none; /* Varsayılan oku kaldırır */
+        }
+        summary::-webkit-details-marker,
+        summary::marker {
+            display: none;
+        }
+        summary::before {
+            content: '▶️';
+            margin-right: 10px;
+            transition: transform 0.2s;
+        }
+        details[open] summary::before {
+            content: '🔽';
+        }
+        .section-content {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+<div class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold text-blue-600 mb-2">🚀 İnteraktif HTML Kursu Deneyim Alanı</h1>
+        <p class="text-gray-600">Videoda anlatılan tüm konuları kod ve çıktılarıyla deneyimleyin.</p>
+    </header>
+
+    <!-- İçerik Tablosu (Gezinme) -->
+    <nav class="mb-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+        <h2 class="text-xl font-semibold text-gray-700 mb-3">İçerik Başlıkları</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <a href="#giris" class="text-blue-600 hover:text-blue-800 transition duration-150">1. Temel Yapı</a>
+            <a href="#linkler" class="text-blue-600 hover:text-blue-800 transition duration-150">2. Linkler</a>
+            <a href="#gorseller" class="text-blue-600 hover:text-blue-800 transition duration-150">3. Görseller</a>
+            <a href="#ses" class="text-blue-600 hover:text-blue-800 transition duration-150">4. Ses İşlemleri</a>
+            <a href="#video" class="text-blue-600 hover:text-blue-800 transition duration-150">5. Video İşlemleri</a>
+            <a href="#metin" class="text-blue-600 hover:text-blue-800 transition duration-150">6. Metin Biçimlendirme</a>
+            <a href="#listeler" class="text-blue-600 hover:text-blue-800 transition duration-150">7. Listeler</a>
+            <a href="#tablolar" class="text-blue-600 hover:text-blue-800 transition duration-150">8. Tablolar</a>
+            <a href="#renkler" class="text-blue-600 hover:text-blue-800 transition duration-150">9. Renkler</a>
+            <a href="#iframe" class="text-blue-600 hover:text-blue-800 transition duration-150">10. iframe</a>
+            <a href="#butonlar" class="text-blue-600 hover:text-blue-800 transition duration-150">11. Butonlar</a>
+            <a href="#formlar" class="text-blue-600 hover:text-blue-800 transition duration-150">12. Formlar</a>
+        </div>
+    </nav>
+
+    <!-- Her Bölüm için Alan (DETAILS etiketi ile interaktif kod gösterimi) -->
+
+    <!-- 1. HTML Giriş & Temel Yapı -->
+    <section id="giris" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">1. HTML Giriş & Temel Yapı</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <h1 class="text-xl font-bold">HTML5 Sayfa Başlığı</h1>
+            <p>Bu, tarayıcıda görünen ilk paragraftır.</p>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;HTML5 Sayfa Başlığı&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML5 Sayfa Başlığı&lt;/h1&gt;
+    &lt;p&gt;Bu, tarayıcıda görünen ilk paragraftır.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 2. Linkler -->
+    <section id="linkler" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">2. Linkler (Bağlantılar)</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <p><a href="https://www.google.com" target="_blank" class="text-green-600 hover:underline">Harici Siteye Git (Yeni Sekme)</a></p>
+            <p><a href="#formlar" class="text-purple-600 hover:underline">Sayfa İçi Formlar Bölümüne Git</a></p>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- Harici linkler için target="_blank" kullanılır --&gt;
+&lt;a href="https://www.google.com" target="_blank"&gt;Harici Siteye Git (Yeni Sekme)&lt;/a&gt;
+
+&lt;!-- Sayfa içi linkler için #id kullanılır --&gt;
+&lt;a href="#formlar"&gt;Sayfa İçi Formlar Bölümüne Git&lt;/a&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 3. Görseller -->
+    <section id="gorseller" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">3. Görseller</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <img src="https://placehold.co/300x150/0f766e/ffffff?text=HTML+Görsel+Örneği" alt="HTML Görsel Örneği" class="rounded-lg shadow-md" style="max-width: 100%;">
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- src: Kaynak, alt: Erişilebilirlik için zorunlu metin --&gt;
+&lt;img 
+    src="https://placehold.co/300x150/0f766e/ffffff?text=HTML+Görsel+Örneği" 
+    alt="HTML Görsel Örneği" 
+    width="300" 
+    height="150"&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 4. Ses İşlemleri -->
+    <section id="ses" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">4. Ses İşlemleri</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <audio controls class="w-full">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Tarayıcınız ses etiketini desteklemiyor.
+            </audio>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- controls özelliği oynatıcı arayüzünü gösterir --&gt;
+&lt;audio controls&gt;
+    &lt;source src="ornek_muzik.mp3" type="audio/mpeg"&gt;
+    Tarayıcınız ses etiketini desteklemiyor.
+&lt;/audio&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 5. Video İşlemleri -->
+    <section id="video" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">5. Video İşlemleri</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <video width="100%" height="auto" controls poster="https://placehold.co/400x225/e0e7ff/3b82f6?text=Video+Yükleniyor...">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- poster, video yüklenene kadar gösterilecek görseldir --&gt;
+&lt;video width="400" height="225" controls poster="placeholder.jpg"&gt;
+    &lt;source src="ornek_video.mp4" type="video/mp4"&gt;
+    Tarayıcınız video etiketini desteklemiyor.
+&lt;/video&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 6. Metin Biçimlendirme -->
+    <section id="metin" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">6. Metin Biçimlendirme</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <p>Bu metin <b>kalın</b>, <i>italik</i>, <u>altı çizili</u> ve <mark>vurgulanmıştır</mark>.</p>
+            <p>Hatta, <strong>çok önemli</strong> veya <small>küçük</small> yazılabilir.</p>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;p&gt;
+    Bu metin &lt;b&gt;kalın&lt;/b&gt;, &lt;i&gt;italik&lt;/i&gt;, 
+    &lt;u&gt;altı çizili&lt;/u&gt; ve &lt;mark&gt;vurgulanmıştır&lt;/mark&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    Hatta, &lt;strong&gt;çok önemli&lt;/strong&gt; veya &lt;small&gt;küçük&lt;/small&gt; yazılabilir.
+&lt;/p&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+    
+    <!-- 7. Listeler -->
+    <section id="listeler" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">7. Listeler</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <div class="flex space-x-8">
+                <div>
+                    <h4 class="font-medium">Sırasız Liste (ul)</h4>
+                    <ul class="list-disc list-inside">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium">Sıralı Liste (ol)</h4>
+                    <ol class="list-decimal list-inside">
+                        <li>Birinci</li>
+                        <li>İkinci</li>
+                        <li>Üçüncü</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;h4&gt;Sırasız Liste&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Sıralı Liste&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;Birinci&lt;/li&gt;
+    &lt;li&gt;İkinci&lt;/li&gt;
+    &lt;li&gt;Üçüncü&lt;/li&gt;
+&lt;/ol&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 8. Tablolar -->
+    <section id="tablolar" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">8. Tablolar</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <table class="w-full border border-gray-300">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="p-2 border border-gray-300">Etiket</th>
+                        <th class="p-2 border border-gray-300">Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="p-2 border border-gray-300 font-mono">&lt;table&gt;</td>
+                        <td class="p-2 border border-gray-300">Ana Tablo</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="p-2 border border-gray-300 font-mono">&lt;tr&gt;</td>
+                        <td class="p-2 border border-gray-300">Satır</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Etiket&lt;/th&gt;
+            &lt;th&gt;Açıklama&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table&lt;/td&gt;
+            &lt;td&gt;Ana Tablo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;tr&lt;/td&gt;
+            &lt;td&gt;Satır&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 9. Renkler -->
+    <section id="renkler" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">9. Renkler (Arka Plan & Metin)</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <div style="background-color: #ffcc00; color: #cc0000; padding: 10px; border-radius: 4px;">
+                Bu metin, sarı arka plan üzerine kırmızı renkte yazılmıştır. (Hex kodlar)
+            </div>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- Renkler Hex, RGB veya isimle verilebilir --&gt;
+&lt;div style="background-color: #ffcc00; color: #cc0000; padding: 10px;"&gt;
+    Bu metin, sarı arka plan üzerine kırmızı renkte yazılmıştır.
+&lt;/div&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 10. iframe -->
+    <section id="iframe" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">10. iframe</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <iframe src="https://tr.wikipedia.org/wiki/HTML" width="100%" height="250" title="Wikipedia HTML Sayfası" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+            <p class="text-sm text-gray-500 mt-2">Not: Bazı siteler güvenlik nedeniyle iframe içinde gösterime izin vermez.</p>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- Farklı bir sayfayı sayfanız içinde gösterir --&gt;
+&lt;iframe 
+    src="https://tr.wikipedia.org/wiki/HTML" 
+    width="100%" 
+    height="250" 
+    title="Wikipedia HTML Sayfası"&gt;
+&lt;/iframe&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 11. Butonlar -->
+    <section id="butonlar" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">11. Butonlar</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                Temel Buton
+            </button>
+            <a href="#giris" class="inline-block ml-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                Link Görünümlü Buton
+            </a>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;!-- Standart buton --&gt;
+&lt;button type="button"&gt;Temel Buton&lt;/button&gt;
+
+&lt;!-- Stil verilmiş link (Buton olarak kullanılabilir) --&gt;
+&lt;a href="#giris"&gt;Link Görünümlü Buton&lt;/a&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <!-- 12. Formlar -->
+    <section id="formlar" class="mb-10 pt-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 section-header">12. Formlar</h2>
+        <div class="output-box mb-4">
+            <p class="font-semibold text-lg text-blue-800">🖼️ Çıktı:</p>
+            <form action="#" method="post" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-gray-700 font-medium">Kullanıcı Adı:</label>
+                    <input type="text" id="username" name="username" placeholder="Adınız" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-700 font-medium">Şifre:</label>
+                    <input type="password" id="password" name="password" required class="w-full p-2 border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded-md transition duration-300">
+                    Giriş Yap
+                </button>
+            </form>
+        </div>
+        <details>
+            <summary class="text-lg font-medium text-gray-700 hover:text-blue-600 transition">Kodu Göster</summary>
+            <div class="section-content">
+                <pre class="code-example"><code>
+&lt;form action="/submit-data" method="post"&gt;
+    &lt;label for="username"&gt;Kullanıcı Adı:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="username" name="username" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Şifre:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="password" id="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;input type="submit" value="Giriş Yap"&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+        </details>
+    </section>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200">
+        <p class="text-gray-500 mb-2">
+            İyi öğrenmeler! Bu yapı sadece HTML (ve Tailwind CSS) kullanılarak oluşturulmuştur.
+        </p>
+        <p class="text-sm text-gray-700 font-semibold">
+            Geliştirici & Kurs Anlatıcısı: 
+            <a href="https://github.com/Erkan3034" target="_blank" class="text-blue-600 hover:text-blue-800 transition duration-150 font-bold">@Erkan3034 (GitHub)</a> 
+            | 
+            <a href="https://www.youtube.com/@codenthia" target="_blank" class="text-red-600 hover:text-red-800 transition duration-150 font-bold">@codenthia (YouTube)</a>
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
